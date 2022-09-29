@@ -1,17 +1,22 @@
 body{
-  padding: 2rem 5rem;
   font-family: 'Montserrat', Arial;
-  background-color:#ff99a7;
-  background-image:
-  radial-gradient(at 6% 76%, hsla(311,100%,61%,1) 0px, transparent 50%),
-  radial-gradient(at 48% 43%, hsla(343,100%,72%,1) 0px, transparent 50%),
-  radial-gradient(at 83% 12%, hsla(288,100%,67%,1) 0px, transparent 50%),
-  radial-gradient(at 13% 75%, hsla(138,100%,76%,1) 0px, transparent 50%),
-  radial-gradient(at 45% 98%, hsla(316,100%,70%,1) 0px, transparent 50%),
-  radial-gradient(at 43% 78%, hsla(94,100%,73%,1) 0px, transparent 50%),
-  radial-gradient(at 84% 16%, hsla(267,100%,66%,1) 0px, transparent 50%);
-  min-height: 100vh;
   color: white;
+  min-height: 100vh;
+  padding: 2rem 5rem;
+}
+
+#gradient-canvas {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  --gradient-color-1: #FE6860; 
+  --gradient-color-2: #FE8A71; 
+  --gradient-color-3: #D9BBAE;  
+  --gradient-color-4: #F3C9BF;
+  z-index: -1;
 }
 
 *{
@@ -26,6 +31,11 @@ p, h1{
 
 img{
   max-width: 100%;
+}
+
+.header, 
+.main {
+  padding: 0 5rem
 }
 
 .nav{
@@ -52,7 +62,7 @@ img{
 .section-grid{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 1rem;
+  column-gap: 0.5rem;
   row-gap: 1rem;
   height: 100%;
   width: 100%;
@@ -77,7 +87,7 @@ img{
   align-items: center;
   border-radius: 10px;
   width: 100%;
-  height: 800px;
+  height: 400px;
   transition: all .5s ease;
 }
 
@@ -88,7 +98,9 @@ img{
 .card__image{
   position: absolute;
   height: 100%;
+  width: 100%;
   border-radius: 10px;
+  object-fit: cover;
   z-index: -1;
 }
 

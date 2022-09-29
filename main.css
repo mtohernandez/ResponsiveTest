@@ -1,0 +1,151 @@
+body{
+  font-family: 'Montserrat', Arial;
+  color: white;
+  min-height: 100vh;
+  padding: 2rem 5rem;
+}
+
+#gradient-canvas {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  --gradient-color-1: #FE6860; 
+  --gradient-color-2: #FE8A71; 
+  --gradient-color-3: #D9BBAE;  
+  --gradient-color-4: #F3C9BF;
+  z-index: -1;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  border-style: border-box;
+}
+
+p, h1{
+  transition: all .5s ease;
+}
+
+img{
+  max-width: 100%;
+}
+
+.header, 
+.main {
+  padding: 0 5rem
+}
+
+.nav{
+  display: flex;
+  gap: 1rem;
+}
+
+.buttons-main:hover{
+  cursor: pointer;
+}
+
+.section-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 3rem;
+  height: 5rem;
+}
+
+#title-main{
+  font-size: 2rem;
+}
+
+.section-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 0.5rem;
+  row-gap: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 1327px) {
+  .section-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .section-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+.text_card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+  height: 400px;
+  transition: all .5s ease;
+}
+
+.text_card{
+  position: relative;
+}
+
+.card__image{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.text_card:hover ~ .text_card{
+  color: black;
+}
+
+.text_card h1{
+  line-height: 30px;
+  text-transform: capitalize;
+  pointer-events: none;
+}
+
+.text_card p{
+  font-size: .8rem;
+}
+
+.text_card:hover{
+  cursor: pointer;
+  transform: scale(1.01);
+  background-position: 10%;
+}
+
+.text_card:hover h1{
+  font-size: 4rem;
+}
+
+.text_card:active{
+  opacity: .5;
+}
+
+.description{
+  transition: all 1s ease;
+}
+
+.text_card:hover .description{
+  transform: translateY(30px);
+}
+
+.title{
+  margin: 0 1rem;
+}
+
+/* footer */
+
+.footer{
+  margin-top: 2rem;
+}
